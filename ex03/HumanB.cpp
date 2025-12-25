@@ -1,8 +1,6 @@
 #include "HumanB.hpp"
 
-HumanB::HumanB(std::string name) : _name(name), _weapon()
-{
-}
+HumanB::HumanB(std::string name) : _name(name), _weapon(){}
 
 void HumanB::attack()
 {

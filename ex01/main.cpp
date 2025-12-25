@@ -8,5 +8,8 @@ int main()
     for(int i = 0; i < nZombies; i++)
         Zombies[i].announce();
 
+    // for(int i = 0; i < nZombies; i++)
+    //     Zombies[i]._announce();
+
     delete [] Zombies;
 }

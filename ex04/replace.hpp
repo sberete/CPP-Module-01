@@ -7,22 +7,22 @@
 #include <iostream>
 #include <fstream>
 
-class Lethimcook
+class FileReplacer
 {
     public:
-        Lethimcook(char **argv);
-        ~Lethimcook();
-        void Tosee();
+        FileReplacer(char *inputFilename, char *stringToFind, char *stringToReplace);
+        ~FileReplacer();
+        void processFile();
 
     private:
-        std::string _to_find;
-        std::string _to_replace;
-        const char *_name;
-        std::string _line;
+        std::string _searchString;
+        std::string _replaceString;
+        const char *_outputFilename;
         std::ifstream _ifs;
         std::ofstream _ofs;
         std::string to_replace(const std::string& _line);
-
 };
 
 #endif
+
+// Changer les nom des fonctions + class

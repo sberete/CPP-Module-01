@@ -2,10 +2,13 @@
 
 int main()
 {
-    Zombie* newzombie = newZombie("Test");
-    if (!newZombie)
-        std::cerr << "Allocation of Zombie failled" << std::endl, exit(1);
-    randomChump("Test2");
+    Zombie* newzombie = newZombie("Zombie 1");
+    if (!newzombie)
+        std::cerr << "Allocation of Zombie failled" << std::endl;
+    
     newzombie->announce();
+    
+    randomChump("Zombie 2");
+    
     delete newzombie;
 }

@@ -7,7 +7,7 @@ OBJS = $(patsubst %.cpp,$(OBJ_DIR)/%.o,$(SRCS))
 
 DEPENDS = $(OBJS:.o=.d)
 
-NAME = BraiiiiiiinnnzzzZ
+NAME = harlFilter
 -include $(DEPEND)
 
 .PHONY: all
