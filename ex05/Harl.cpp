@@ -13,7 +13,7 @@ void Harl::complain(std::string level)
             return;
         }
     }
-    std::cout << "Not found" << std::endl;
+    std::cout << "Unknown complaint level" << std::endl;
 }
 
 void Harl::debug()
@@ -24,18 +24,15 @@ void Harl::debug()
 void Harl::info()
 {
     std::cout << "[ INFO ]\nI cannot believe adding extra bacon costs more money.\nYou didn’t put enough bacon in my burger! If you did, I wouldn’t be asking for more!" << std::endl;
-
 }
 
 void Harl::warning()
 {
     std::cout << "[ WARNING ]\nI think I deserve to have some extra bacon for free.\nI’ve been coming for years, where as you started working here just last month." << std::endl;
-
 }
 
 void Harl::error()
 {
     std::cout << "[ ERROR ]\nThis is unacceptable! I want to speak to the manager now." << std::endl;
-
 }
 
