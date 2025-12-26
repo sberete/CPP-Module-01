@@ -9,7 +9,7 @@ enum Level
     ERROR
 };
 
-Level test (const std::string& level)
+Level test(const std::string& level)
 {
     if (level == "DEBUG") return DEBUG;
     if (level == "INFO") return INFO;
@@ -25,26 +25,15 @@ void Harl::complain(std::string level)
     switch (contain)
     {
         case DEBUG:
-            debug();
-            NL
-            info();
-            NL
-            warning();
-            NL
-            error();
+            debug(); NL info(); NL warning(); NL error();
             break;
+
         case INFO:
-            info();
-            NL
-            warning();
-            NL
-            error();
+            info(); NL warning(); NL error();
             break;
 
         case WARNING:
-            warning();
-            NL
-            error();
+            warning(); NL error();
             break;
 
         case ERROR:

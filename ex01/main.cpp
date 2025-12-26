@@ -6,10 +6,10 @@ int main()
     Zombie* Zombies = zombieHorde(nZombies, "foo");
 
     for(int i = 0; i < nZombies; i++)
-        Zombies[i].announce();
-
-    // for(int i = 0; i < nZombies; i++)
-    //     Zombies[i]._announce();
+    {
+        // Zombies[i].announce();
+        Zombies[i]._announce();
+    }
 
     delete [] Zombies;
 }

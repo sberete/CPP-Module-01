@@ -4,9 +4,8 @@ int main()
 {
     Harl harl;
     std::string str;
-    // for(;;)
-    // {
-        std::cin >> str;
-        harl.complain(str);
-    // }
+
+    std::cout << "Put :" << std::endl;
+    std::getline(std::cin, str);
+    harl.complain(str);
 }

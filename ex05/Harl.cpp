@@ -5,7 +5,6 @@ void Harl::complain(std::string level)
     void (Harl::*ptr_function[4])() = {&Harl::debug, &Harl::info, &Harl::warning, &Harl::error};
 
     std::string str[4] = {"DEBUG", "INFO", "WARNING", "ERROR"};
-
     for (size_t i = 0; i < 4; i++)
     {
         if (str[i] == level)
@@ -24,7 +23,7 @@ void Harl::debug()
 
 void Harl::info()
 {
-    std::cout << "[ INFO ]\nI cannot believe adding extra bacon costs more money. You didn’t put enough bacon in my burger! If you did, I wouldn’t be asking for more!" << std::endl;
+    std::cout << "[ INFO ]\nI cannot believe adding extra bacon costs more money.\nYou didn’t put enough bacon in my burger! If you did, I wouldn’t be asking for more!" << std::endl;
 
 }
 

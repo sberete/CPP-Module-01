@@ -1,6 +1,6 @@
 #include "Zombie.hpp"
 
-Zombie::Zombie(){_nZombie = 0; _flag = 0; _o_flag = 0;}
+Zombie::Zombie(): _nZombie(0), _flag(0), _o_flag(0){}
 
 Zombie::~Zombie()
 {
