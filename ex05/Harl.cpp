@@ -2,18 +2,21 @@
 
 void Harl::complain(std::string level)
 {
-    void (Harl::*ptr_function[4])() = {&Harl::debug, &Harl::info, &Harl::warning, &Harl::error};
+    std::map<std::string, void (Harl::*)(void)> m;
 
-    std::string str[4] = {"DEBUG", "INFO", "WARNING", "ERROR"};
-    for (size_t i = 0; i < 4; i++)
+    m["DEBUG"] = &Harl::debug;
+    m["INFO"] = &Harl::info;
+    m["WARNING"] = &Harl::warning;
+    m["ERROR"] = &Harl::error;
+
+    try
     {
-        if (str[i] == level)
-        {
-            (this->*ptr_function[i])();
-            return;
-        }
+        (this->*m.at(level))();
     }
-    std::cout << "Unknown complaint level" << std::endl;
+    catch(const std::exception&)
+    {
+        std::cout << "Unknown complaint level" << std::endl;
+    }
 }
 
 void Harl::debug()

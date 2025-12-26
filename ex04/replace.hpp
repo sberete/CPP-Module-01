@@ -18,8 +18,7 @@ class FileReplacer
         std::string _searchString;
         std::string _replaceString;
         const char *_outputFilename;
-        std::ifstream _ifs;
-        std::ofstream _ofs;
+        const char *_inputFilename;
         std::string to_replace(const std::string& _line);
 };
 
